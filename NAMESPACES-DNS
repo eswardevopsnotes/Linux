@@ -1,0 +1,16 @@
+How to add NameSpaces (DNS SERVER DETAILS IN AMAZON LINUX)
+
+
+Check the DNS Details Listed Using   systemd-resolve --status
+Add or modify the DNS= line to set your preferred DNS servers:
+sudo vi /etc/systemd/resolved.conf
+sudo cat /etc/systemd/resolved.conf
+
+[Resolve]
+DNS= 10.160.76.28 10.160.1.152(EXAMPLE)
+
+sudo systemctl restart systemd-resolved
+
+Now you can use nslookup command to  check whether the requests are directing to right DNS Servers(NAMESPACES)
+
+
